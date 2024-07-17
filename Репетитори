@@ -82,3 +82,78 @@ tutors = [
             "Мій син почав любити фізику."
         ]
     },
+# Хімія 
+    { 
+        "name": "Валентин Білий",  
+        "subject": "Хімія",  
+        "image": "https://cdn.prod.website-files.com/63851d467dc151a9f46a992b/638630e705534b463196f6f8_62b46638bedf9aabc6b3c121_Walter%2520white.jpeg", 
+        "description": "Експерт з хімії з унікальними методиками викладання.", 
+        "rating": 4.7, 
+        "level": "Початковий", 
+        "reviews": [ 
+            "Дуже добре пояснює складні теми.", 
+            "Рекомендую всім, хто має труднощі з хімією." 
+        ] 
+    }, 
+    { 
+        "name": "Катерина Хімік",  
+        "subject": "Хімія",  
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0Nsqrb9CTNRDw2l2JPSIbFk3SSA1gxyw9_Q&s", 
+        "description": "Репетитор з хімії для середнього рівня.", 
+        "rating": 4.8, 
+        "level": "Середній", 
+        "reviews": [ 
+            "Прекрасно пояснює лабораторні роботи.", 
+            "Дуже задоволений результатами." 
+        ] 
+    }, 
+    { 
+        "name": "Андрій Молекула",  
+        "subject": "Хімія", 
+"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Jean_Perrin_1927.jpg/200px-Jean_Perrin_1927.jpg", 
+        "description": "Викладач вищої хімії та органічної хімії.", 
+        "rating": 4.9, 
+        "level": "Вищий", 
+        "reviews": [ 
+            "Справжній професіонал у своїй справі!", 
+            "Допоміг підготуватися до університетських екзаменів." 
+        ] 
+    },
+ # Англійська мова 
+    { 
+        "name": "Секретний викладач",  
+        "subject": "Англійська мова",  
+        "image": "https://big.informator.ua/wp-content/uploads/2023/10/oleksijdashkovskyj.jpg", 
+        "description": "Цей викладач має секрети, які змінюють світ!", 
+        "rating": 5.0, 
+        "level": "Вищий", 
+        "reviews": [ 
+            "Найкращий викладач усіх часів і народів!", 
+            "Не повірите, які здивуваливі факти я дізнався на його уроках!" 
+        ] 
+    }, 
+    { 
+        "name": "Анна Англійська",  
+        "subject": "Англійська мова",  
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7G-xE-NXbe18Bikud_WcGjPkG-bqGuFHBAg&s", 
+        "description": "Репетитор з англійської мови для середнього рівня.", 
+        "rating": 4.8, 
+        "level": "Середній", 
+        "reviews": [ 
+            "Дуже цікаві уроки.", 
+            "Моя англійська значно покращилася." 
+        ] 
+    }, 
+    { 
+        "name": "Олексій Лінгвіст",  
+        "subject": "Англійська мова",  
+        "image": "https://i.ytimg.com/vi/Ix5895nr0w4/maxresdefault.jpg", 
+        "description": "Викладач англійської мови для початкового рівня.", 
+        "rating": 4.7, 
+        "level": "Початковий", 
+        "reviews": [ 
+            "Відмінно пояснює граматику.", 
+            "Мій син почав говорити англійською." 
+        ] 
+    } 
+]
