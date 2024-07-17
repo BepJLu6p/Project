@@ -198,3 +198,22 @@ def show_tutor_info(tutor):
         text_reviews.insert(tk.END, f"• {review}\n") 
     text_reviews.config(state=tk.DISABLED) 
     text_reviews.grid(row=7, column=0, columnspan=2, padx=10, pady=10)
+
+def play_music(): 
+    pass
+ 
+def show_rikroll(): 
+    webbrowser.open_new("https://www.youtube.com/watch?v=dQw4w9WgXcQ") 
+     
+def play_youtube_video(): 
+    pass 
+ 
+def filter_tutors(event): 
+    category = category_combobox.get() 
+    filtered_tutors = [tutor for tutor in tutors if tutor['subject'] == category] 
+    update_treeview(filtered_tutors) 
+def update_treeview(tutors_list): 
+    for item in tree.get_children(): 
+        tree.delete(item) 
+    for tutor in tutors_list: 
+        tree.insert("", tk.END, values=(tutor['name'], tutor['subject'], tutor['level']))
