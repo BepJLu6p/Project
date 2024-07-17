@@ -1,4 +1,3 @@
-```c
 import tkinter as tk
 from tkinter import ttk, Toplevel, Label, Text
 import webbrowser
@@ -8,3 +7,41 @@ from PIL import Image, ImageTk
 import pygame
 
 # Інформація про преподов
+tutors = [
+    # Матеша
+    {
+        "name": "Іван Іванов", 
+        "subject": "Математика", 
+        "image":  "https://static.wikia.nocookie.net/zlodei/images/e/e1/%D0%9C%D0%BE%D1%80%D0%B8%D0%B0%D1%80%D1%82%D0%B8_%282018%29.jpg/revision/latest?cb=20221229200542&path-prefix=ru",
+        "description": "Досвідчений репетитор з математики з більш ніж 10-річним досвідом.",
+        "rating": 4.8,
+        "level": "Середній",
+        "reviews": [
+            "Відмінний викладач! Доступно пояснює матеріал.",
+            "Дуже задоволений заняттями, результати помітні."
+        ]
+    },
+    {
+        "name": "Олександр Математик", 
+        "subject": "Математика", 
+        "image": "https://static.wikia.nocookie.net/protagonist/images/8/8f/37608.jpg/revision/latest?cb=20130825102629&path-prefix=ru",
+        "description": "Репетитор з математики для початкового рівня.",
+        "rating": 4.6,
+        "level": "Початковий",
+        "reviews": [
+            "Прекрасний підхід до дітей.",
+            "Дуже добре пояснює основи."
+        ]
+    },
+    {
+        "name": "Марія Геометрична", 
+        "subject": "Математика", 
+        "image": "https://cs12.pikabu.ru/post_img/big/2022/11/09/8/1667996297113276940.jpg",
+        "description": "Викладач вищої математики та геометрії.",
+        "rating": 4.9,
+        "level": "Вищий",
+        "reviews": [
+            "Справжній професіонал у своїй справі!",
+            "Допомогла підготуватися до олімпіади."
+        ]
+    },
