@@ -157,3 +157,44 @@ tutors = [
         ] 
     } 
 ]
+
+def show_tutor_info(tutor): 
+    window = Toplevel(root) 
+    window.title(tutor['name']) 
+ 
+    response = requests.get(tutor['image']) 
+    img_data = response.content 
+    img = Image.open(BytesIO(img_data)) 
+    img = img.resize((200, 200), Image.LANCZOS) 
+    img = ImageTk.PhotoImage(img) 
+ 
+    label_image = Label(window, image=img) 
+    label_image.image = img 
+    label_image.grid(row=0, column=0, rowspan=5, padx=10, pady=10) 
+ 
+    label_name = Label(window, text=f"Ім'я: {tutor['name']}", font=("Arial", 14, "bold")) 
+    label_name.grid(row=0, column=1, sticky='w') 
+ 
+    label_subject = Label(window, text=f"Предмет: {tutor['subject']}", font=("Arial", 14)) 
+    label_subject.grid(row=1, column=1, sticky='w') 
+ 
+    label_rating = Label(window, text=f"Оцінка: {tutor['rating']}", font=("Arial", 14)) 
+    label_rating.grid(row=2, column=1, sticky='w') 
+ 
+    label_level = Label(window, text=f"Рівень: {tutor['level']}", font=("Arial", 14)) 
+    label_level.grid(row=3, column=1, sticky='w') 
+ 
+    label_description = Label(window, text="Опис:", font=("Arial", 14, "bold")) 
+    label_description.grid(row=4, column=1, sticky='nw') 
+    text_description = Text(window, wrap='word', height=4, width=40, font=("Arial", 12)) 
+    text_description.insert(tk.END, tutor['description']) 
+    text_description.config(state=tk.DISABLED) 
+    text_description.grid(row=5, column=0, columnspan=2, padx=10, pady=10) 
+ 
+    label_reviews = Label(window, text="Відгуки:", font=("Arial", 14, "bold")) 
+    label_reviews.grid(row=6, column=0, sticky='nw', padx=10, pady=10) 
+    text_reviews = Text(window, wrap='word', height=6, width=60, font=("Arial", 12)) 
+    for review in tutor['reviews']: 
+        text_reviews.insert(tk.END, f"• {review}\n") 
+    text_reviews.config(state=tk.DISABLED) 
+    text_reviews.grid(row=7, column=0, columnspan=2, padx=10, pady=10)
