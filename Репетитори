@@ -217,3 +217,41 @@ def update_treeview(tutors_list):
         tree.delete(item) 
     for tutor in tutors_list: 
         tree.insert("", tk.END, values=(tutor['name'], tutor['subject'], tutor['level']))
+
+# начальное окно 
+root = tk.Tk() 
+root.title("Пошук Репетиторів") 
+root.geometry("500x400") 
+ 
+# Додавав випадаючий список для категорій 
+categories = ["Математика", "Фізика", "Хімія", "Англійська мова"] 
+category_combobox = ttk.Combobox(root, values=categories, state="readonly") 
+category_combobox.set("Виберіть предмет") 
+category_combobox.pack(pady=10) 
+category_combobox.bind("<<ComboboxSelected>>", filter_tutors) 
+ 
+# Додав список репетиторів 
+tree = ttk.Treeview(root, columns=("Name", "Subject", "Level"), show='headings') 
+tree.heading("Name", text="Ім'я") 
+tree.heading("Subject", text="Предмет") 
+tree.heading("Level", text="Рівень надаваемих знань") 
+tree.pack(fill=tk.BOTH, expand=True, padx=10, pady=10) 
+ 
+update_treeview(tutors) 
+ 
+# даблклик 
+def on_double_click(event): 
+    item = tree.selection()[0] 
+    item_text = tree.item(item, "values") 
+    tutor = next((t for t in tutors if t['name'] == item_text[0]), None) 
+    if tutor: 
+        show_tutor_info(tutor) 
+ 
+tree.bind("<Double-1>", on_double_click) 
+ 
+# сектена розробка 
+button_rikroll = tk.Button(root, text="Секретна кнопка для рікрола", command=show_rikroll, bg="red", fg="white") 
+button_rikroll.pack(pady=10) 
+ 
+# Запуск програми 
+root.mainloop()
