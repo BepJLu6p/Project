@@ -1,1 +1,10 @@
+```c
+import tkinter as tk
+from tkinter import ttk, Toplevel, Label, Text
+import webbrowser
+import requests
+from io import BytesIO
+from PIL import Image, ImageTk
+import pygame
 
+# Інформація про преподов
